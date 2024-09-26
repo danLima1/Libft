@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 16:38:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 16:50:40 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/26 16:51:48 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dst = (char *)malloc(sizeof(char) * (len + 1));
 	while (j <= len)
 	{
-		dst[j] = s[i];
+		dst[i] = s[i];
 		j++;
 		i++;
 	}
