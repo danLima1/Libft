@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 16:21:07 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 13:36:26 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/26 14:39:18 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/09/26 15:08:43 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putstr_fd(char *s, int fd)
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
+	char *dest;
+	unsigned int i;
 
+	dest = (char *)malloc(sizeof (char) * (ft_strlen(s) + 1));
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
-		write(fd, &s[i], 1);
+		dest[i] = (*f)(i, s[i]);
 		i++;
 	}
+	dest[i] = '\0';
+	return dest;
 }
 
-/*int main()
+char ft_teste(unsigned int i, char c)
 {
-	ft_putstr_fd("teste", 1);
-}*/
+
+	if(c >= 'a' && c <= 'z')
+	{
+		c -= 32;
+	}
+	return c;
+}
+
+
+int main()
+{
+
+	char *str = "teste";
+	printf("%s",ft_strmapi(str, ft_teste));
+}

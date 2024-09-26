@@ -1,18 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 16:18:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 12:29:00 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/26 12:44:54 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/09/26 14:50:47 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+void ft_striteri(char *s, void (*f)(unsigned int,char*))
 {
-	write(fd, &c, 1);
+	unsigned int i;
+	i = 0;
+
+	if(s == NULL || f == NULL)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+
 }
 
+void ft_putstr(unsigned int i, char *c)
+{
+	i = 0;
+	char n ='a';
+	while(c[i] != '\0')
+	{
+
+		write(1, &c[i], 1);
+		i++;
+	}
+}
+int main()
+{
+	char *s = "teste";
+	ft_striteri(s, ft_putstr);
+}

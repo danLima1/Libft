@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/24 16:18:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 12:29:00 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/26 12:11:46 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/09/26 12:28:03 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+void ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+	long nb = n;
+
+	if( nb < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = -nb;
+	}
+	if(nb < 10)
+		ft_putchar_fd(nb + '0', fd);
+	else
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd((nb % 10) + '0', fd);
+	}
 }
 
+
+int main()
+{
+	ft_putnbr_fd(-123, 1);
+}
