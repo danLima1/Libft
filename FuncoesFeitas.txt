@@ -21,6 +21,8 @@
 ✅ft_striteri
 ✅ft_strmapi
 ✅memcmp
+✅ft_substr
+✅ft_strjoin
 • calloc
 • memmove
 • memchr
@@ -30,5 +32,3 @@
 •ft_itoa
 •ft_split
 •ft_strtrim
-•ft_strjoin
-•ft_substr
