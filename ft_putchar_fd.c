@@ -6,13 +6,13 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:18:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 12:29:00 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:35:08 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-

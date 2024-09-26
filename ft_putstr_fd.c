@@ -6,17 +6,18 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 16:21:07 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 13:36:26 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/26 15:40:57 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_putstr_fd(char *s, int fd)
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;

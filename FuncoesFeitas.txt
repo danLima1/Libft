@@ -20,15 +20,15 @@
 ✅ft_putnbr_fd
 ✅ft_striteri
 ✅ft_strmapi
--ft_itoa
--ft_split
--ft_strtrim
--ft_strjoin
--ft_substr
+✅memcmp
 • calloc
 • memmove
 • memchr
-• memcmp
 • strnstr
 • strchr
 • strrchr
+•ft_itoa
+•ft_split
+•ft_strtrim
+•ft_strjoin
+•ft_substr
