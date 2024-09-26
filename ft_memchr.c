@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:02:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 19:15:55 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:16:32 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		if(*cs == (unsigned char)c)
 			return ((void *)cs);
 		n--;
-		s++;
+		cs++;
 	}
 	return (NULL);
 }
