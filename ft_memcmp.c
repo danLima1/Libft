@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 15:32:05 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 16:19:21 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 09:31:22 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	int				i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 
@@ -35,13 +35,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-}
-
-int main()
-{
-	int s1[] = {1, 2, 3, 4, 5};
-	int s2[] = {6, 3, 8, 9, 10};
-	char *st1 = "hello";
-	char *st2 = "world";
-	printf("%i", ft_memcmp(&s1[3], &s2[1], 10));
 }

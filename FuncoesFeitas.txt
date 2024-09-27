@@ -23,10 +23,10 @@
 ✅memcmp
 ✅ft_substr
 ✅ft_strjoin
+✅memchr
 • calloc
-• memmove
-• memchr
 • strnstr
+• memmove
 • strchr
 • strrchr
 •ft_itoa

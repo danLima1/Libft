@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:02:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 19:16:32 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 09:32:24 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char *cs;
+	const unsigned char	*cs;
 
 	cs = (const unsigned char *)s;
-	while ( n > 0)
+	while (n > 0)
 	{
-		if(*cs == (unsigned char)c)
+		if (*cs == (unsigned char)c)
 			return ((void *)cs);
 		n--;
 		cs++;
 	}
 	return (NULL);
-}
-
-int main()
-{
-	char *s ="teste";
-	printf("%s", (char *)ft_memchr(s, 'e', 5));
 }

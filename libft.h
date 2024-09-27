@@ -6,11 +6,11 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 15:41:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 15:50:21 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 09:33:31 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef LIBFT_H
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <unistd.h>

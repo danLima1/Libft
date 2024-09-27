@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 16:38:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/26 17:51:08 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 09:31:43 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	dst[j] = '\0';
 	return (dst);
-}
-
-int main()
-{
-	char *s = "teste";
-	printf("%s", ft_substr(s, 2, 5));
 }
