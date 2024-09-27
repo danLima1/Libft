@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:10:18 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 15:05:36 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 15:10:31 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 int main()
 {
-	char *s1 = "hello";
-	char *s2 = "worlds";
+	char s1[] = "hello";
+	char s2[] = "worlds";
 	char *s;
-	s = ft_memmove(s1, s2, 8);
-	printf("%s", s);
+	char *s3;
+	s = ft_memmove(s1, s2, 3);
+	s3 = memmove(s1, s2, 3);
+	printf("minha função:%s\n", s);
+	printf("função original:%s\n", s);
 }
