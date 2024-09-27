@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 15:32:05 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 12:32:11 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 13:22:08 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while ((str1[i] != '\0' || str2[i] != '\0') && i < n)
 	{
 		if (str1[i] != str2[i])
-			return(str1[i] - str2[i]);
+			return (str1[i] - str2[i]);
 		i++;
 	}
 	return (0);
 }
-

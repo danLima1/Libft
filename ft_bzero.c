@@ -6,14 +6,15 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:21:51 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 13:01:11 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 13:23:08 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	char	*str;
+	char		*str;
 	size_t		i;
 
 	str = (char *)s;
