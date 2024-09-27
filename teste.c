@@ -6,14 +6,18 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:13:44 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/24 15:14:23 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 12:29:17 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
-int	main(void)
-{
-	printf("%i", ft_strlen("teste"));
+int main() {
+
+    int n;
+    char *s1 = "hello";
+    char *s2 = "world";
+    n = memcmp(s1, s2, 5);
+    printf("%i", n);
 }

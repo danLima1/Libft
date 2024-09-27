@@ -6,12 +6,12 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 19:02:28 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 09:32:24 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/09/27 11:57:23 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <string.h>
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*cs;
@@ -25,4 +25,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		cs++;
 	}
 	return (NULL);
+}
+int main()
+{
+	char *s ="abcdefgh";
+	printf("%s", (char *)ft_memchr(s, 'd', 2));
 }

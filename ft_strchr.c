@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 15:41:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 12:59:32 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/27 09:40:36 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/09/27 09:49:57 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+char	*strchr(const char *s, int c)
+{
+	int		i;
+	char	*cs;
 
-int		ft_strlen(const char *str);
-void	ft_putchar_fd(char c, int fd);
-int		ft_toupper(int c);
-void	ft_putstr_fd(char *s, int fd);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	cs = (char *)s;
+	i = 0;
+	while (i < c)
+	{
+		if (*cs == c)
+			return (cs);
+		i++;
+		cs++;
+	}
+	return (cs);
+}

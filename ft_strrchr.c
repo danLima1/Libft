@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 15:41:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 12:59:32 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/27 09:53:19 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/09/27 10:38:38 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdio.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	char	*cs;
+	int		length;
+	char *t = "falha";
 
-int		ft_strlen(const char *str);
-void	ft_putchar_fd(char c, int fd);
-int		ft_toupper(int c);
-void	ft_putstr_fd(char *s, int fd);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-void	ft_bzero(void *s, size_t n);
+	length = ft_strlen(s);
+	cs = (char *)s;
+	while (length > 0)
+	{
+		if (cs[length] == c)
+		{
+			return (&cs[length]);
+		}
+		length--;
+	}
+	return (t);
+}
 
-#endif
+int main()
+{
+	char *s = "testei petite";
+	printf("%s", ft_strrchr(s, 'i'));
+}

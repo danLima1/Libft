@@ -24,11 +24,11 @@
 ✅ft_substr
 ✅ft_strjoin
 ✅memchr
-• calloc
+✅strchr
+✅calloc
+✅strrchr
 • strnstr
 • memmove
-• strchr
-• strrchr
 •ft_itoa
 •ft_split
 •ft_strtrim
