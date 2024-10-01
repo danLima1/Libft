@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 13:10:18 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 15:10:31 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:28:59 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	len = 0;
 	dst = (unsigned char *)dest;
 	csrc = (unsigned char *)src;
-
 	if (src < dest)
 	{
 		len = n;
-		while(len > 0)
+		while (len > 0)
 		{
 			len--;
 			dst[len] = csrc[len];
@@ -33,24 +32,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		len = 0;
-		while(len < n)
-		{
+		len = -1;
+		while (++len < n)
 			dst[len] = csrc[len];
-			len++;
-		}
 	}
-	return(dst);
+	return (dst);
 }
-
-int main()
-{
-	char s1[] = "hello";
-	char s2[] = "worlds";
-	char *s;
-	char *s3;
-	s = ft_memmove(s1, s2, 3);
-	s3 = memmove(s1, s2, 3);
-	printf("minha função:%s\n", s);
-	printf("função original:%s\n", s);
-}
+// int main()
+// {
+// 	char s1[] = "hello";
+// 	char s2[] = "worlds";
+// 	char *s;
+// 	char *s3;
+// 	s = ft_memmove(s1, s2, 3);
+// 	s3 = memmove(s1, s2, 3);
+// 	printf("minha função:%s\n", s);
+// 	printf("função original:%s\n", s);
+// }

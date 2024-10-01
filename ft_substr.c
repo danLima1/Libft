@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 16:38:13 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/30 15:18:13 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/01 18:30:54 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*dst;
+	char		*dst;
 	size_t		i;
 	size_t		j;
 
