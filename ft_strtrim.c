@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 14:54:49 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/30 16:32:55 by dde-lima         ###   ########.fr       */
+/*   Created: 2024/09/30 14:36:40 by dde-lima          #+#    #+#             */
+/*   Updated: 2024/10/01 14:16:02 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
+	int i;
+	int j;
+	char *str;
 
 	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	while(*s1 && ft_strchr(set, *s1))
+		s1++;
+	j = ft_strlen(s1);
+	while(j && ft_strrchr(set, s1[j -1]))
+		j--;
+	str = ft_substr(s1, 0, j);
+	return (str);
 }
-/*int main()
+
+
+int main()
 {
-	#include <stdio.h>
-	printf("%i", ft_strlen("teste"));
-}*/
+	char cpf[] = "...........167.641......................";
+	char set[] = ".";
+	printf("%s",ft_strtrim(cpf, set));
+}

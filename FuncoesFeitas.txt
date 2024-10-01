@@ -28,7 +28,7 @@
 ✅calloc
 ✅strrchr
 ✅memmove
-• strnstr
+✅strnstr
 •ft_itoa
 •ft_split
 •ft_strtrim
