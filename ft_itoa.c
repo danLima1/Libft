@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:16:51 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/01 19:00:22 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:52:55 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	int		n_lenght;
 
 	long nb = n;
-	n_lenght = get_lenght(n);
+	n_lenght = get_lenght(nb);
 	str = (char *)malloc(sizeof(char) * n_lenght + 1);
 	str[n_lenght] = '\0';
 	if (nb < 0)
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		str[n_lenght -1] = n % 10 + '0';
+		str[n_lenght -1] = nb % 10 + '0';
 		nb /= 10;
 		n_lenght--;
 	}

@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 14:36:40 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/01 18:36:36 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/03 15:00:43 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
 	int		j;
 	char	*str;
 
-	i = 0;
+	j = 0;
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;
 	j = ft_strlen(s1);
