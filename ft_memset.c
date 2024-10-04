@@ -6,13 +6,14 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 16:33:41 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/24 12:05:32 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:31:32 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+#include "libft.h"
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*cast;
 
 	cast = (char *)s;

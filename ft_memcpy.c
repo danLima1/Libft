@@ -6,14 +6,16 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:54:39 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/24 15:11:53 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:29:36 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*dst;
-	int		i;
+	size_t	i;
 	char	*csrc;
 
 	csrc = (char *) src;

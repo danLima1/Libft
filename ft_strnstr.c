@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 15:41:06 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/01 18:30:25 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/04 13:23:46 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
+	size_t	i;
 	int	j;
 
 	i = 0;

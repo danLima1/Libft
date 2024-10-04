@@ -29,6 +29,6 @@
 ✅strrchr
 ✅memmove
 ✅strnstr
-•ft_itoa
-•ft_split
-•ft_strtrim
+✅ft_itoa
+✅ft_split
+✅ft_strtrim

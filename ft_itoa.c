@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:16:51 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/03 15:52:55 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/04 11:08:18 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,9 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		n_lenght;
+	long	nb;
 
-	long nb = n;
+	nb = n;
 	n_lenght = get_lenght(nb);
 	str = (char *)malloc(sizeof(char) * n_lenght + 1);
 	str[n_lenght] = '\0';

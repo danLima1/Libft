@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:24:32 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/03 18:02:46 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:00:50 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ static int	count_word(char const *str, char c)
 
 static char	*worddup(char const *str, int start, int end)
 {
-	int i;
-	char *dest;
+	int		i;
+	char	*dest;
 
 	dest = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!dest)
@@ -54,14 +54,13 @@ static int	find_words(char const *str, char c, char **split)
 {
 	int	i;
 	int	count;
-	int len;
-	int j;
+	int	len;
+	int	j;
 
 	j = 0;
 	i = -1;
 	count = -1;
 	len = ft_strlen(str);
-
 	while (++i <= len)
 	{
 		if (str[i] != c && count < 0)
@@ -78,11 +77,11 @@ static int	find_words(char const *str, char c, char **split)
 
 char	**ft_split(char const *s, char c)
 {
-	char **split;
+	char	**split;
 
 	if (!s)
 		return (NULL);
-	split = (char **)malloc(sizeof(char*) * (count_word(s, c) + 1));
+	split = (char **)malloc(sizeof(char *) * (count_word(s, c) + 1));
 	if (!split)
 		return (NULL);
 	find_words(s, c, split);
@@ -92,7 +91,7 @@ char	**ft_split(char const *s, char c)
 int main(void)
 {
 	char **result;
-	char *str = " eu odeio a, split ";
+	char *str = " eu               odeio a, split ";
 	char delimiter = ' ';
 	int i = 0;
 
