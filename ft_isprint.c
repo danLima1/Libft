@@ -6,15 +6,15 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 16:08:32 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/23 16:17:20 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/07 13:46:57 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if (c <= 31)
-		return (0);
-	return (1);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
 
 /*int main()

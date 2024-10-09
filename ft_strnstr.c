@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 15:41:06 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/04 14:18:43 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:41:32 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,28 +19,21 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	j = 0;
-	while (big[i] != '\0')
+	if (!*little || big == little)
+		return ((char *) big);
+	while (big[i] != '\0' && i < len)
 	{
 		if (big[i] == little[j])
 		{
-			while (big[i + j] == little[j] && i < len)
+			while ((big[i + j] == little[j]) && (i + j) < len)
 			{
-				if (little[j + 1] == '\0')
-				{
-					return ((char *)(big + i));
-				}
 				j++;
 			}
+			if (little[j] == '\0')
+				return ((char *)(&big[i]));
 			j = 0;
 		}
 		i++;
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	char s1[] = "eduardo teste";
-// 	char s2[]= "r";
-// 	printf("%s", ft_strnstr(s1, s2, 10));
-// }

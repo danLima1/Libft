@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:24:32 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/04 14:18:13 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:26:09 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,21 +87,3 @@ char	**ft_split(char const *s, char c)
 	find_words(s, c, split);
 	return (split);
 }
-
-// int main(void)
-// {
-// 	char **result;
-// 	char *str = " eu               odeio a, split ";
-// 	char delimiter = ' ';
-// 	int i = 0;
-
-// 	result = ft_split(str, delimiter);
-
-// 	while (result[i] != NULL)
-// 	{
-// 		printf("Palavra %d: '%s'\n", i, result[i]);
-// 		i++;
-// 	}
-
-// 	return 0;
-// }

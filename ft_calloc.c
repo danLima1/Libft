@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 12:43:46 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/09/27 13:19:24 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:00:37 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void *)malloc(nmemb * size);
-	if (ptr == NULL)
+	ptr = malloc(nmemb * size);
+	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, nmemb);
+	ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 09:40:36 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/01 18:25:27 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:48:02 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int		i;
 	char	*cs;
 
 	cs = (char *)s;
-	i = ft_strlen(s);
-	while (i > 0)
+	while (*cs)
 	{
 		if (*cs == c)
 			return (cs);
-		i--;
 		cs++;
 	}
-	return (0);
+	if (c == '\0')
+		return (cs);
+	return (NULL);
 }

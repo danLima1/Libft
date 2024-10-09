@@ -6,7 +6,7 @@
 /*   By: dde-lima <dde-lima@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:54:32 by dde-lima          #+#    #+#             */
-/*   Updated: 2024/10/04 14:18:29 by dde-lima         ###   ########.fr       */
+/*   Updated: 2024/10/08 15:49:39 by dde-lima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,17 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
+	size_t	len;
 
 	i = 0;
-	j = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] != '\0' && j < size)
+	len = ft_strlen(dst);
+	if (len >= size)
+		return (size + ft_strlen(src));
+	while (src[i] != '\0' && (len + i) < (size -1))
 	{
-		dst[i] = src[j];
+		dst[len + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	return (i);
+	dst[len + i] = '\0';
+	return (len + ft_strlen(src));
 }
